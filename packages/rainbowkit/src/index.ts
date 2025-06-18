@@ -33,6 +33,11 @@ export type { RainbowKitChain as Chain } from './components/RainbowKitProvider/R
 export { lightTheme } from './themes/lightTheme';
 export { darkTheme } from './themes/darkTheme';
 export { midnightTheme } from './themes/midnightTheme';
+export {
+  FlexPayButton,
+  FlexPayModal,
+  EnhancedConnectModal,
+} from './components/FlexPay';
 export { cssStringFromTheme } from './css/cssStringFromTheme';
 export { cssObjectFromTheme } from './css/cssObjectFromTheme';
 export { __private__ } from './__private__';

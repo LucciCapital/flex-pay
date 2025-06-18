@@ -1,6 +1,8 @@
 import { RainbowButton } from '@rainbow-me/rainbow-button';
 import {
   ConnectButton,
+  FlexPayButton,
+  FlexPayModal,
   WalletButton,
   useAccountModal,
   useAddRecentTransaction,
@@ -104,7 +106,16 @@ const Example = ({ authEnabled }: AppContextProps) => {
           top: 8,
         }}
       >
-        <ConnectButton
+        <FlexPayButton
+          merchantName="Your Store"
+          amount={99.99}
+          currency="USD"
+          description="Premium Subscription"
+          onPaymentComplete={() => {
+            // Handle successful payment
+          }}
+        />
+        {/* <ConnectButton
           accountStatus={{
             largeScreen: accountStatusLargeScreen,
             smallScreen: accountStatusSmallScreen,
@@ -117,7 +128,7 @@ const Example = ({ authEnabled }: AppContextProps) => {
             largeScreen: showBalanceLargeScreen,
             smallScreen: showBalanceSmallScreen,
           }}
-        />
+        /> */}
       </div>
 
       <div>
